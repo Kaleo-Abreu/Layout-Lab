@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Tabelas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+</head>
+<body>
+    <h2>1) Tabela de Filmes</h2>
+<table class="filmes">
+    <tr>
+        <th>Título</th>
+        <th>Diretor</th>
+        <th>Ano</th>
+        <th>Classificação</th>
+    </tr>
+    <tr>
+        <td>Inception</td>
+        <td>Christopher Nolan</td>
+        <td>2010</td>
+        <td>9/10</td>
+    </tr>
+    <tr>
+        <td>Interstellar</td>
+        <td>Christopher Nolan</td>
+        <td>2014</td>
+        <td>10/10</td>
+    </tr>
+    <tr>
+        <td>Matrix</td>
+        <td>Lana & Lilly Wachowski</td>
+        <td>1999</td>
+        <td>9/10</td>
+    </tr>
+</table>
+
+
+<h2>2) Tabela usando rowspan</h2>
+<table class="alimentos">
+    <tr>
+        <th rowspan="2">Alimento</th>
+        <th colspan="4">Informações Nutricionais</th>
+    </tr>
+    <tr>
+        <th>Calorias (kcal)</th>
+        <th>Proteínas (g)</th>
+        <th>Carboidratos (g)</th>
+        <th>Gorduras (g)</th>
+    </tr>
+    <tr>
+        <td>Maçã</td>
+        <td>52</td>
+        <td>0.3</td>
+        <td>13.8</td>
+        <td>0.2</td>
+    </tr>
+    <tr>
+        <td>Cenoura</td>
+        <td>41</td>
+        <td>0.9</td>
+        <td>9.6</td>
+        <td>0.2</td>
+    </tr>
+</table>
+
+
+<h2>3) Tabuleiro de Damas</h2>
+<table class="damas">
+    <!-- 8 linhas -->
+    <!-- alternância entre preto e branco -->
+    <!-- cada célula 50x50px -->
+    <!-- padrão manual -->
+    <!-- linhas pares começam com preta -->
+    <!-- linhas ímpares com branca -->
+    <!-- Mais automático poderia ser feito, mas mantendo simples -->
+    <!-- L1 -->
+    <tr>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+    </tr>
+    <!-- L2 -->
+    <tr>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+    </tr>
+    <!-- L3 -->
+    <tr>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+    </tr>
+    <!-- L4 -->
+    <tr>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+    </tr>
+    <!-- L5 -->
+    <tr>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+    </tr>
+    <!-- L6 -->
+    <tr>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+    </tr>
+    <!-- L7 -->
+    <tr>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+        <td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td>
+    </tr>
+    <!-- L8 -->
+    <tr>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+        <td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td>
+    </tr>
+</table>
+
+
+<h2>4) Tabela com formatação zebrada</h2>
+<table class="zebrada">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+    </tr>
+    <tr>
+        <td>Maria</td>
+        <td>25</td>
+        <td>Teresina</td>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>30</td>
+        <td>Parnaíba</td>
+    </tr>
+    <tr>
+        <td>Ana</td>
+        <td>22</td>
+        <td>Picos</td>
+    </tr>
+</table>
+</body>
+</html>
