@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background: linear-gradient(to bottom, #b3cce2, #d9ccc1);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #d9ccc1;
+    background-color: #005eb0;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #024059;
+}
+
+pre {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+}
+
+.motivacional {
+    font-family: "Tilt Neon", sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.autor, .data {
+    color: darkslategray;
+    font-style: italic;
+}
+
+.autor {
+    text-align: right;
+}
+
+.data {
+    text-align: left;
+    font-size: 0.8rem;
+}
