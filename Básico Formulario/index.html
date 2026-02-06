@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- Define que o documento segue o padrão HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Importa um arquivo CSS externo para estilizar a página -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres, permitindo acentos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva para celulares e tablets -->
+
+    <title>Formulário</title>
+    <!-- Título exibido na aba do navegador -->
+</head>
+
+<body>
+    <h1>Formulários</h1>
+    <!-- Título principal da página -->
+
+    <form action="" method="post">
+        <!-- Início do formulário de login -->
+        <!-- action vazio indica que os dados serão enviados para a mesma página -->
+        <!-- method="post" envia os dados de forma mais segura -->
+
+        <label>Login:</label><br>
+        <!-- Rótulo do campo de login -->
+
+        <input type="text" name="login" id="login" maxlength="15">
+        <!-- Campo de texto para o login -->
+        <!-- maxlength limita a digitação a 15 caracteres -->
+
+        <br>
+
+        <label>Senha:</label><br>
+        <!-- Rótulo do campo de senha -->
+
+        <input type="password" name="senha" id="senha" maxlength="5">
+        <!-- Campo de senha -->
+        <!-- Os caracteres digitados ficam ocultos -->
+        <!-- maxlength limita a senha a 5 caracteres -->
+
+        <br>
+
+        <input type="checkbox" name="permanecer" id="permanecer" 
+               value="permancer-conectado" checked>
+        <!-- Caixa de seleção -->
+        <!-- value é o valor enviado caso esteja marcada -->
+        <!-- checked deixa a opção marcada por padrão -->
+        Permancer Conectado
+
+        <br>
+
+        <input type="submit" id="botaoEnviar" value="Entrar">
+        <!-- Botão que envia os dados do formulário -->
+
+    </form>
+
+    <h2>Busca no Google</h2>
+    <!-- Título da seção de busca no Google -->
+
+    <form action="http://www.google.com/search">
+        <!-- Formulário que envia a busca para o Google -->
+
+        <input type="text" name="q" id="q">
+        <!-- Campo de texto -->
+        <!-- O nome "q" é o parâmetro que o Google usa para buscas -->
+
+        <input type="submit" value="Buscar">
+        <!-- Botão para enviar a busca -->
+    </form>
+
+    <h2>Busca na Amazon</h2>
+    <!-- Título da seção de busca na Amazon -->
+
+    <form action="https://www.amazon.com.br/s?k=">
+        <!-- Formulário que envia a busca para a Amazon -->
+
+        <input type="text" name="field-keywords" id="field-keywords">
+        <!-- Campo de texto -->
+        <!-- "field-keywords" é o parâmetro usado pela Amazon -->
+
+        <input type="submit" value="Buscar">
+        <!-- Botão para enviar a busca -->
+    </form>
+
+</body>
+</html>
+
+
+
