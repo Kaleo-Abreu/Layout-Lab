@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuários - continuação</title>
+</head>
+
+<body>
+    <h1>Formulários - continuação</h1>
+    <!-- Título principal da página -->
+
+    <h2>Múltipla escolha</h2>
+    <!-- Seção de múltipla escolha usando checkbox -->
+
+    <form>
+        <!-- Formulário para envio de dados -->
+
+        <input type="checkbox" name="hobbies" id="pescar" value="pescar">Pescar
+        <!-- Checkbox permite selecionar várias opções ao mesmo tempo -->
+
+        <input type="checkbox" name="hobbies" id="correr" value="correr">Correr
+        <!-- Todas possuem o mesmo "name", então serão enviadas como grupo -->
+
+        <input type="checkbox" name="hobbies" id="nadar" value="nadar">Nadar
+
+        <input type="submit" name="enviar" id="enviar" value="Enviar">
+        <!-- Botão que envia o formulário -->
+    </form>
+
+    <h2>Escolha única</h2>
+    <h3>Turno preferido</h3>
+    <!-- Seção de escolha única usando radio -->
+
+    <form>
+        <input type="radio" name="turno" id="manha" value="manha">Manhã
+        <!-- Radio permite selecionar apenas UMA opção por grupo (mesmo name) -->
+
+        <input type="radio" name="turno" id="tarde" value="tarde">Tarde
+
+        <input type="radio" name="turno" id="noite" value="noite">Noite
+
+        <input type="submit" name="enviar" id="enviar2" value="Enviar">
+    </form>
+    
+    <h2>Componentes select</h2>
+    <h3>Escolha única</h3>
+    <!-- Lista suspensa para escolher uma única opção -->
+
+    <form>
+        <select name="estados" id="estados">
+            <!-- Campo select cria um menu suspenso -->
+
+            <option value="CE">Ceará</option>
+            <!-- Option representa cada item da lista -->
+
+            <option value="MA">Maranhão</option>
+
+            <option value="PI">Piauí</option>
+        </select>
+
+        <input type="submit" name="enviar" id="enviar3" value="Enviar">
+    </form>
+
+    <h3>Escolha multipla</h3>
+    <!-- Select permitindo múltiplas escolhas -->
+
+    <form>
+        <select name="frutas" id="frutas" size="1" multiple>
+            <!-- "multiple" permite selecionar várias opções -->
+            <!-- size define quantas opções aparecem visíveis -->
+
+            <option value="banana">Banana</option>
+            <option value="maca">Maçã</option>
+            <option value="pessego">Pêssego</option>
+            <option value="uva">Uva</option>
+        </select>
+
+        <input type="submit" name="enviar" id="enviar4" value="Enviar">
+    </form>
+
+    <h2>Texto longo</h2>
+    <!-- Campo para digitação de texto maior -->
+
+    <textarea id="observacoes" 
+             name="observacoes" cols="50" rows="5"></textarea>
+    <!-- Textarea permite escrever textos longos -->
+    <!-- cols define largura e rows define altura -->
+
+    <h2>Miscelânia</h2>
+    <!-- Seção com vários tipos de campos -->
+
+    <form>
+        <label for="nome">Nome:</label>
+        <!-- Label associa o texto ao campo -->
+
+        <input id="nome" name="nome">
+        <!-- Campo de texto simples -->
+
+        <input type="checkbox" name="receber" id="receber" checked>
+        <!-- Checkbox já vem marcado por causa do "checked" -->
+
+        <label for="receber">Receber e-mails</label>
+
+        <p>Nacionalidade</p>
+
+        <input type="radio" name="nacionalidade" id="brasileiro"
+               value="brasileiro" checked>
+        <!-- Radio já marcado por padrão -->
+
+        <label for="brasileiro">Brasileiro</label>
+
+        <input type="radio" name="nacionalidade" id="estrangeiro"
+               value="estrangeiro">               
+
+        <label for="estrangeiro">Estrangeiro</label>   
+
+        <input type="reset" value="Redefinir">
+        <!-- Botão que limpa os campos do formulário -->
+    </form>
+
+    <br><br><br><br><br><br>
+    <!-- Espaçamento extra no final da página -->
+</body>
+
+</html>
