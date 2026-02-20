@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outos campos</title>
+</head>
+<body>
+    
+<form action="" method="get"> <!-- Envia os dados pela URL -->
+
+    <h2>Nome</h2>
+    <!-- Campo de texto simples -->
+    <input type="text" id="nome" name="nome"
+           placeholder="Digite seu nome">
+
+    <h2>Cor</h2>
+    <!-- Seletor visual de cor -->
+    <input type="color" name="cor" id="cor">
+
+    <h2>Datas</h2>
+    <!-- Seleciona uma data com limite mínimo e máximo -->
+    <input type="date" min="1980-01-01" max="2026-01-01">
+
+    <!-- Data e hora juntos -->
+    <input type="datetime-local" name="data" id="data">
+
+    <!-- Apenas mês e ano -->
+    <input type="month" id="bdaymonth" name="bdaymonth">
+
+    <!-- Semana do ano -->
+    <input type="week" id="semana" name="semana">
+
+    <!-- Apenas horário -->
+    <input type="time" name="time" id="time">
+
+    <h2>E-mail</h2>
+    <!-- Valida automaticamente formato de e-mail -->
+    <input type="email" id="email" name="email">
+
+    <h2>Arquivo</h2>
+    <!-- Permite enviar um arquivo do computador -->
+    <input type="file" id="myfile" name="myfile">
+
+    <h2>Números</h2>
+    <!-- Campo numérico com limite, intervalo e obrigatório -->
+    <input type="number"
+           min="0"
+           max="100"
+           step="10"
+           value="50"
+           required>
+
+    <!-- Barra deslizante para escolher número -->
+    <input type="range"
+           id="idade"
+           min="0"
+           max="100"
+           step="10"
+           value="50"
+           required>
+
+    <!-- Mostra o valor do range (precisa de JS para funcionar dinamicamente) -->
+    <output name="x" for="idade"></output>
+
+    <!-- Campo telefone com padrão obrigatório -->
+    <input type="tel"
+           id="phone"
+           name="phone"
+           pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}"
+           placeholder="Ex: (99) 99999-9999">
+
+    <h2>URL</h2>
+    <!-- Aceita apenas links válidos -->
+    <input type="url" id="url" name="url">
+
+    <!-- Botão para enviar o formulário -->
+    <input type="submit" value="Enviar">
+
+</form>
