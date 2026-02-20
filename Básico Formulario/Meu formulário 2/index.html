@@ -1,0 +1,171 @@
+<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
+
+<html lang="pt-br"> <!-- Início do HTML e define idioma como português -->
+<head>
+
+<meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+<title>Formulário de Registro</title> <!-- Título da aba do navegador -->
+
+<style>
+
+/* Define a fonte do site inteiro */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estiliza o formulário */
+form {
+  max-width: 400px; /* largura máxima */
+  margin: 20px auto; /* centraliza na tela */
+  padding: 20px; /* espaço interno */
+  border: 1px solid #ccc; /* borda cinza */
+}
+
+/* Espaçamento entre os campos */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Estilo das labels */
+label {
+  margin-bottom: 5px;
+  display: block; /* faz a label ocupar linha inteira */
+}
+
+/* Estilo dos campos de texto, email, senha, select e textarea */
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea {
+  width: 100%; /* ocupa toda largura */
+  padding: 8px; /* espaço interno */
+  margin: 5px 0 20px 0; /* margem externa */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* borda arredondada */
+  box-sizing: border-box; /* inclui padding dentro da largura */
+}
+
+/* Estilo do botão */
+input[type=submit] {
+  background-color: #4CAF50; /* verde */
+  color: white; /* texto branco */
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* muda o cursor para mão */
+}
+
+/* Efeito quando passa o mouse no botão */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FORMULÁRIO DE REGISTRO -->
+<form action="/register" method="POST"> 
+<!-- action = para onde os dados vão -->
+<!-- method POST = envia dados escondidos -->
+
+<h1>Registro</h1>
+
+<div class="form-group">
+  <label for="nome">Nome Completo:</label> <!-- Texto do campo -->
+  <input type="text" id="nome" name="nome" required>
+  <!-- type=text = campo de texto -->
+  <!-- required = obrigatório -->
+</div>
+
+<div class="form-group">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <!-- type=email valida formato de email -->
+</div>
+
+<div class="form-group">
+  <label for="senha">Senha:</label>
+  <input type="password" id="senha" name="senha" required>
+  <!-- type=password esconde os caracteres -->
+</div>
+
+<div class="form-group">
+  <label for="data">Data de Nascimento:</label>
+  <input type="date" id="data" name="data" required>
+  <!-- type=date abre calendário -->
+</div>
+
+<div class="form-group">
+  <label>Sexo:</label>
+  <input type="radio" name="sexo" value="masculino"> Masculino
+  <input type="radio" name="sexo" value="feminino"> Feminino
+  <input type="radio" name="sexo" value="outro"> Outro
+  <!-- radio permite selecionar apenas uma opção -->
+</div>
+
+<div class="form-group">
+  <label>Interesses:</label>
+  <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia
+  <input type="checkbox" name="interesses" value="educacao"> Educação
+  <input type="checkbox" name="interesses" value="musica"> Música
+  <input type="checkbox" name="interesses" value="esportes"> Esportes
+  <!-- checkbox permite múltiplas escolhas -->
+</div>
+
+<div class="form-group">
+  <label for="pais">País:</label>
+  <select id="pais" name="pais" required>
+    <!-- select cria dropdown -->
+    <option value="">Selecione</option>
+    <option value="brasil">Brasil</option>
+    <option value="eua">Estados Unidos</option>
+    <option value="canada">Canadá</option>
+    <option value="japao">Japão</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="biografia">Biografia:</label>
+  <textarea id="biografia" name="biografia" rows="5"></textarea>
+  <!-- textarea cria campo de texto grande -->
+</div>
+
+<div class="form-group">
+  <input type="submit" value="Registrar">
+  <!-- botão de envio -->
+</div>
+
+</form>
+
+
+<!-- FORMULÁRIO DE BUSCA YOUTUBE -->
+<form action="https://www.youtube.com/results" method="GET">
+  <!-- method GET mostra dados na URL -->
+  <label for="yt">Buscar no YouTube:</label>
+  <input type="text" id="yt" name="search_query">
+  <input type="submit" value="Buscar">
+</form>
+
+
+<!-- FORMULÁRIO DE BUSCA BING -->
+<form action="https://www.bing.com/search" method="GET">
+  <label for="bing">Buscar no Bing:</label>
+  <input type="text" id="bing" name="q">
+  <input type="submit" value="Buscar">
+</form>
+
+
+<!-- FORMULÁRIO DE BUSCA WIKIPEDIA -->
+<form action="https://pt.wikipedia.org/w/index.php" method="GET">
+  <label for="wiki">Buscar na Wikipedia:</label>
+  <input type="text" id="wiki" name="search">
+  <input type="submit" value="Buscar">
+</form>
+
+</body>
+</html>
