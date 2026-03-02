@@ -1,0 +1,63 @@
+/* Seletor universal (*) 
+   Aplica a TODOS os elementos da página */
+   * {
+    margin: 0;          /* Remove a margem padrão dos elementos */
+    line-height: 1.5;   /* Define o espaçamento entre linhas do texto */
+}
+
+/* Estilização do corpo da página */
+body {
+    background-color: lightgray;  /* Cor de fundo cinza claro */
+    margin: 0;                    /* Remove margem externa */
+    padding: 0;                   /* Remove espaçamento interno */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte principal do site */
+}
+
+/* Estilização do cabeçalho */
+header {
+    text-align: center; /* Centraliza o texto dentro do header */
+}
+
+/* Estilização do título principal */
+h1 {
+    font-size: 5rem; /* Tamanho grande da fonte (5x o tamanho base) */
+    padding: 2%;     /* Espaçamento interno proporcional */
+}
+
+/* Área principal do conteúdo */
+main {
+    width: 70%;     /* Ocupa 70% da largura da tela */
+    margin: auto;   /* Centraliza horizontalmente */
+}
+
+/* Cada artigo do blog */
+article {
+    background-color: white;      /* Fundo branco */
+    border: 1px dotted gray;      /* Borda pontilhada cinza */
+    margin: 20px;                 /* Espaço externo entre artigos */
+    padding: 20px;                /* Espaço interno do conteúdo */
+}
+
+/* Aplica o mesmo estilo para footer e header */
+footer,
+header {
+    background-color: black; /* Fundo preto */
+    color: white;            /* Texto branco */
+    margin: 0;               /* Remove margens */
+}
+
+/* Estilização da lista dentro do menu de navegação */
+nav ul {
+    list-style: none;          /* Remove marcadores da lista */
+    display: flex;             /* Ativa o Flexbox */
+    justify-content: center;   /* Centraliza os itens horizontalmente */
+    gap: 30px;                 /* Espaço entre os itens do menu */
+    padding: 20px;             /* Espaçamento interno */
+    font-size: 1.5rem;         /* Aumenta o tamanho da fonte */
+}
+
+/* Parágrafo dentro do header */
+header p {
+    font-size: 2rem; /* Deixa o subtítulo maior */
+}

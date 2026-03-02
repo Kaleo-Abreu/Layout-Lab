@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    border: 1px solid blue;
+}
+
+#Caixa1 {
+    border: 1px solid black;
+    width: 400px;
+    margin: auto; 
+}
+
+#Caixa2 {
+    border: 1px dotted red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#Caixa3 {
+    border: 1px dashed green;
+    padding: 20px;
+}
