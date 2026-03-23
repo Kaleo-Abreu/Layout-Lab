@@ -1,0 +1,186 @@
+:root {
+    --cor-fundo: #000;
+    --cor-texto: #FFFFFF;
+    --cor-branco: #FFFFFF;
+    --cor-vermelho: #E10600;
+    --cor-cinza: gray;
+    --cor-article: #000;
+    --cor-aside: #000;
+
+    --gradiente-body: linear-gradient(to left, rgb(73, 70, 70), rgb(164, 162, 162), rgb(73, 70, 70));
+    --gradiente-header: linear-gradient(to bottom, black, rgb(52, 51, 51));
+
+    --espaco-p: 15px;
+    --espaco-m: 20px;
+    --espaco-g: 40px;
+
+    --fonte-pequena: 1.1rem;
+    --fonte-media: 1.3rem;
+    --fonte-grande: 2rem;
+    --fonte-titulo: 5rem;
+
+    --borda-radius: 10px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: var(--gradiente-body);
+    color: var(--cor-texto);
+}
+
+/* Header e Footer */
+header, footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+header {
+    text-align: center;
+    margin-bottom: var(--espaco-g);
+    background-image: var(--gradiente-header);
+    box-shadow: 5px 5px 15px 5px #ac0909;
+}
+
+footer {
+    margin-top: var(--espaco-g);
+    background-image: var(--gradiente-header);
+    box-shadow: 3px -8px 10px 3px #383737;
+}
+
+/* TÍTULOS EM VERMELHO */
+h1, h2, h3 {
+    color: var(--cor-vermelho);
+}
+
+header p {
+    font-size: var(--fonte-grande);
+}
+
+footer p {
+    padding: var(--espaco-p);
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: var(--fonte-titulo);
+    padding-top: 2%;
+}
+
+h2 {
+    border-bottom: 1px dotted var(--cor-cinza);
+    border-left: 10px solid var(--cor-vermelho);
+    padding-left: 10px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: var(--espaco-m);
+    font-size: var(--fonte-media);
+}
+
+/* Layout */
+main {
+    width: 70%;
+    margin: auto;
+}
+
+article {
+    background-color: var(--cor-article);
+    border: 1px dotted var(--cor-cinza);
+    margin: var(--espaco-m) 0;
+    padding: var(--espaco-m);
+    border-radius: var(--borda-radius);
+    box-shadow: 3px 3px 10px 3px #383737;
+}
+
+article * {
+    margin: var(--espaco-p);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+
+a:hover {
+    color: var(--cor-vermelho);
+}
+
+/* Autor */
+.autor {
+    text-align: right;
+    color: rgb(180, 180, 180);
+    font-style: italic;
+}
+
+/* Botão */
+.botao {
+    background-color: #101820;
+    color: var(--cor-branco);
+    padding: var(--espaco-p) var(--espaco-m);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: var(--espaco-m) auto;
+    text-align: center;
+    font-size: var(--fonte-pequena);
+}
+
+.botao a {
+    color: var(--cor-branco);
+}
+
+.botao:hover a {
+    color: var(--cor-vermelho);
+}
+
+/* Aside */
+aside {
+    width: 70%;
+    margin: var(--espaco-m) auto;
+    background-color: var(--cor-aside);
+    color: var(--cor-branco);
+    padding: var(--espaco-m);
+    border-radius: var(--borda-radius);
+    box-shadow: 3px 3px 10px #000;
+}
+
+aside h3 {
+    color: var(--cor-vermelho);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside a {
+    color: var(--cor-branco);
+}
+
+aside a:hover {
+    color: var(--cor-vermelho);
+}
+
+/* Imagens */
+img {
+    max-width: 50%;
+    height: auto;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - São Paulo FC</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <header id="topo">
+            <h1>São Paulo FC</h1>
+            <p>História do clube SPFC</p>
+
+            <nav>
+                <ul id="menu">
+                    <li><a href="#topo">Início</a></li>
+                    <li><a href="#ultima">Como começou</a></li>
+                    <li><a href="#primeira">Mascote</a></li>
+                    <li><a href="#rodape">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-hamburguer" onclick="toggleMenu()">
+                <div class="hamburguer"></div>
+                <div class="hamburguer"></div>
+                <div class="hamburguer"></div>
+            </div>
+        </header>
+
+        <main>
+
+            <article id="ultima">
+                <h2>Como começou:</h2>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="img/inicio.png">
+                    <source media="(max-width: 1024px)" srcset="img/inicio.png">
+                    <img src="img/inicio.png" alt="Fundação do São Paulo FC">
+                </picture>
+
+                <p>
+                    No dia 25 de janeiro de 1930 foi assinada a ata de fundação do São Paulo Futebol Clube, nascido da união entre a Associação Atlética das Palmeiras e uma grande parte dos jogadores e alguns membros da diretoria do Club Athletico Paulistano (que resolveu fechar o departamento de futebol em 1929), ficando como data magna do clube o dia 25 de janeiro de 1930, dia e mês em que foi fundada a cidade de São Paulo. Conservando as tradições do passado, o uniforme da nova equipe estamparia as faixas vermelhas e pretas em homenagem aos dois times fundadores.
+<br><br>
+                    O São Paulo ainda herdaria o campo pertencente à Associação Atlética das Palmeiras, a chamada Chácara da Floresta, razão pela qual essa fase (1930–1935) passou a ser conhecida, apenas recentemente e de modo informal, como São Paulo da Floresta.
+                </p>
+            </article>
+
+            <article>
+                <h2>Conquistas:</h2>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="img/Trofeus.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/Trofeus.jpg">
+                    <img src="img/Trofeus.jpg" alt="Títulos do São Paulo FC">
+                </picture>
+
+                <p>
+                    Como conquistas, o Tricolor Paulista venceu o Campeonato Paulista de 1931 em seu segundo ano de existência e conseguiu sagrar-se vice em 1930, 1932, 1933 e 1934. Foi também vice-campeão do Torneio Rio-São Paulo de 1933. Portanto, o São Paulo FC, clube recém fundado, estava no topo do futebol local. Um fato extraordinário, mas nem tanto se levadas em consideração suas origens vencedoras.
+<br><br>
+                    O São Paulo comprou, então, uma nova e suntuosa sede localizada na Rua Conselheiro Crispiniano, centro de São Paulo. O imóvel era um pequeno palácio conhecido como "Trocadero", adquirido ao custo de 190 contos de réis. Essa dívida era grande para a época, porém o clube, detentor de um campo como o da Chácara da Floresta e um quadro de jogadores que valia muito, não se deixava abalar. Entretanto, alguns dirigentes andavam descontentes com os rumos do futebol no país e resolveram fundir-se com o Clube de Regatas Tietê, acabando de vez com o departamento de futebol. Outro grupo, favorável à continuidade da esquadra e liderados pelo Dr. Paulo Sampaio, foi à Justiça e em 23 de abril de 1935 impugnou o direito da diretoria fundir o Tricolor com o Tietê sem que a opinião dos sócios fosse ouvida.
+                </p>
+            </article>
+
+            <article>
+                <h2>Escudo:</h2>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="img/escudo.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/escudo.jpg">
+                    <img src="img/escudo.jpg" alt="Escudo do São Paulo FC">
+                </picture>
+
+                <p>
+                    De acordo com o estatuto do clube, o símbolo do Tricolor Paulista é formado por um triângulo isósceles branco, invertido, com base maior elevada por um retângulo com altura igual à metade da lateral do referido triângulo. Dentro dessa parte alongada encontra-se outro retângulo, de cor preta, com as iniciais SPFC em branco. No interior do triângulo uma faixa branca de largura igual a um quarto da lateral menor com dois triângulos escalenos, um vermelho à esquerda e outro preto, à direita. As estrelas foram introduzidas posteriormente e também têm um significado especial. As duas douradas, gravadas no escudo em 1955 e, posteriormente, no uniforme em 1997, representam os recordes mundiais e olímpicos conquistados por Adhemar Ferreira da Silva nas Olimpíadas de 1952 em Helsinque e nos Jogos Pan-Americanos de 1955 no México.
+                </p>
+            </article>
+
+            <article id="primeira">
+                <h2>Mascote:</h2>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="img/mascote.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/mascote.jpg">
+                    <img src="img/mascote.jpg" alt="Mascote do São Paulo FC">
+                </picture>
+
+                <p>
+                   Até hoje o São Paulo Futebol Clube teve apenas uma mascote, que ficou marcada em sua história. Criada na década de 1940 por um cartunista do jornal A Gazeta Esportiva, a imagem do santo agradou a todos os são-paulinos, permanecendo até hoje como mascote oficial do clube. Pelo fato do verdadeiro São Paulo ter morrido com aproximadamente 60 anos, é representada por um velhinho de barba branca. É chamada de "Santo" Paulo para não confundir com o nome do clube.
+                </p>
+            </article>
+
+        </main>
+
+        <aside class="sidebar">
+            <h3>Links úteis:</h3>
+            <ul>
+                <li><a href="https://www.saopaulofc.net/">Site oficial do SPFC</a></li>
+                <li><a href="#">Tabela do Brasileirão</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_Futebol_Clube">História completa</a></li>
+            </ul>
+        </aside>
+
+        <aside class="sidebar">
+            <h3>Curiosidades do SPFC</h3>
+            <p>
+                O São Paulo é o único clube brasileiro a conquistar três títulos mundiais (1992, 1993 e 2005).
+            </p>
+            <p>
+                O estádio do Morumbi já foi um dos maiores do mundo.
+            </p>
+        </aside>
+
+        <footer id="rodape">
+            <p>Copyright 2026 &copy; - Blog São Paulo FC</p>
+            <p>Email: <a href="mailto:contato@blogspfc.com">kaleo.abr.exemplo@gmail.com</a></p>
+            <p>Instagram: k4leoa_breu</p>
+            <p>Cidade: Timon - MA</p>
+
+            <button class="botao">
+            <a href="#topo">Voltar ao topo</a>
+        </button>
+
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('#menu').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
