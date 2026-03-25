@@ -1,46 +1,81 @@
+/* Variáveis globais (facilitam manutenção do site) */
 :root {
-    --cor-fundo: #000;
-    --cor-texto: #FFFFFF;
+    --cor-fundo: #000; /* cor de fundo principal */
+    --cor-texto: #FFFFFF; /* cor padrão do texto */
     --cor-branco: #FFFFFF;
-    --cor-vermelho: #E10600;
-    --cor-cinza: gray;
-    --cor-article: #000;
-    --cor-aside: #000;
+    --cor-vermelho: #E10600; /* cor destaque (SPFC) */
+    --cor-cinza: rgb(255, 255, 255);
+    --cor-article: #000; /* fundo dos artigos */
+    --cor-aside: #000; /* fundo da sidebar */
 
     --gradiente-body: linear-gradient(to left, rgb(73, 70, 70), rgb(164, 162, 162), rgb(73, 70, 70));
     --gradiente-header: linear-gradient(to bottom, black, rgb(52, 51, 51));
 
-    --espaco-p: 15px;
-    --espaco-m: 20px;
-    --espaco-g: 40px;
+    --espaco-p: 15px; /* espaçamento pequeno */
+    --espaco-m: 20px; /* médio */
+    --espaco-g: 40px; /* grande */
 
     --fonte-pequena: 1.1rem;
     --fonte-media: 1.3rem;
     --fonte-grande: 2rem;
     --fonte-titulo: 5rem;
 
-    --borda-radius: 10px;
+    --borda-radius: 10px; /* arredondamento padrão */
 }
 
-/* Reset */
+/* Reset básico */
 * {
-    margin: 0;
-    line-height: 1.5;
+    margin: 0; /* remove margens padrão */
+    line-height: 1.5; /* melhora leitura */
 }
 
-/* Body */
+/* Estilo geral da página */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: var(--gradiente-body);
     color: var(--cor-texto);
 }
 
-/* Header e Footer */
+/* Layout principal usando GRID */
+#container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 2fr 1fr; /* conteúdo maior + sidebar menor */
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Define áreas do grid */
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside-container {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column; /* organiza asides em coluna */
+    gap: 20px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* Estilo do cabeçalho e rodapé */
 header, footer {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
 
+/* Cabeçalho */
 header {
     text-align: center;
     margin-bottom: var(--espaco-g);
@@ -48,40 +83,45 @@ header {
     box-shadow: 5px 5px 15px 5px #ac0909;
 }
 
+/* Rodapé */
 footer {
     margin-top: var(--espaco-g);
     background-image: var(--gradiente-header);
     box-shadow: 3px -8px 10px 3px #383737;
 }
 
-/* TÍTULOS EM VERMELHO */
+/* Títulos do site */
 h1, h2, h3 {
     color: var(--cor-vermelho);
 }
 
+/* Subtítulo do header */
 header p {
     font-size: var(--fonte-grande);
 }
 
+/* Texto do rodapé */
 footer p {
     padding: var(--espaco-p);
     font-size: 1.5rem;
 }
 
+/* Título principal */
 h1 {
     font-size: var(--fonte-titulo);
     padding-top: 2%;
 }
 
+/* Títulos dos artigos */
 h2 {
     border-bottom: 1px dotted var(--cor-cinza);
     border-left: 10px solid var(--cor-vermelho);
     padding-left: 10px;
 }
 
-/* Navegação */
+/* Menu de navegação */
 nav ul {
-    list-style: none;
+    list-style: none; /* remove bolinhas */
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -89,12 +129,12 @@ nav ul {
     font-size: var(--fonte-media);
 }
 
-/* Layout */
+/* Área principal */
 main {
-    width: 70%;
-    margin: auto;
+    width: 100%;
 }
 
+/* Estilo dos artigos */
 article {
     background-color: var(--cor-article);
     border: 1px dotted var(--cor-cinza);
@@ -102,27 +142,23 @@ article {
     padding: var(--espaco-m);
     border-radius: var(--borda-radius);
     box-shadow: 3px 3px 10px 3px #383737;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação */
 }
 
+/* Espaçamento interno dos elementos do artigo */
 article * {
     margin: var(--espaco-p);
 }
 
 /* Links */
 a {
-    text-decoration: none;
+    text-decoration: none; /* remove sublinhado */
     color: var(--cor-branco);
 }
 
+/* Efeito ao passar o mouse */
 a:hover {
     color: var(--cor-vermelho);
-}
-
-/* Autor */
-.autor {
-    text-align: right;
-    color: rgb(180, 180, 180);
-    font-style: italic;
 }
 
 /* Botão */
@@ -139,18 +175,18 @@ a:hover {
     font-size: var(--fonte-pequena);
 }
 
+/* Link dentro do botão */
 .botao a {
     color: var(--cor-branco);
 }
 
+/* Hover do botão */
 .botao:hover a {
     color: var(--cor-vermelho);
 }
 
-/* Aside */
+/* Sidebar */
 aside {
-    width: 70%;
-    margin: var(--espaco-m) auto;
     background-color: var(--cor-aside);
     color: var(--cor-branco);
     padding: var(--espaco-m);
@@ -158,29 +194,47 @@ aside {
     box-shadow: 3px 3px 10px #000;
 }
 
+/* Título da sidebar */
 aside h3 {
     color: var(--cor-vermelho);
 }
 
+/* Lista da sidebar */
 aside ul {
     list-style: none;
     padding: 0;
 }
 
+/* Itens da lista */
 aside ul li {
     margin: 10px 0;
-}
-
-aside a {
-    color: var(--cor-branco);
-}
-
-aside a:hover {
-    color: var(--cor-vermelho);
 }
 
 /* Imagens */
 img {
     max-width: 50%;
-    height: auto;
+    height: auto; /* mantém proporção */
+}
+
+/* Responsividade (celular) */
+@media (max-width: 768px) {
+    #container {
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Algo diferente: Efeito ao passar o mouse nos artigos */
+article:hover {
+    transform: scale(1.03); /* aumenta levemente */
+    box-shadow: 0 0 15px var(--cor-vermelho);
+}
+
+/* Algo diferente: Muda cor do título ao passar o mouse */
+article:hover h2 {
+    color: var(--cor-branco);
 }
