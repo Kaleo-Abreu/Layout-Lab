@@ -6,160 +6,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - São Paulo FC</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Container principal que organiza todo o layout -->
     <div id="container">
 
-        <!-- Cabeçalho do site -->
+        <!-- Cabeçalho -->
         <header class="header" id="topo">
-            
-            <!-- Título principal do blog -->
             <h1>São Paulo FC</h1>
-
-            <!-- Subtítulo -->
             <p>História do clube SPFC</p>
 
-            <!-- Menu de navegação -->
+            <!-- Menu desktop -->
             <nav>
                 <ul id="menu">
-                    <!-- Links que levam para partes da própria página -->
                     <li><a href="#topo">Início</a></li>
-                    <li><a href="#ultima">Como começou</a></li>
-                    <li><a href="#primeira">Mascote</a></li>
+                    <li><a href="#inicio">Como começou</a></li>
+                    <li><a href="#conquistas">Conquistas</a></li>
+                    <li><a href="#escudo">Escudo</a></li>
+                    <li><a href="#mascote">Mascote</a></li>
                     <li><a href="#rodape">Contato</a></li>
                 </ul>
             </nav>
 
-            <!-- Menu hambúrguer (usado no mobile) -->
-            <div class="menu-hamburguer" onclick="toggleMenu()">
-                <div class="hamburguer"></div>
-                <div class="hamburguer"></div>
-                <div class="hamburguer"></div>
+            <!-- Menu hambúrguer (mobile) - Requisito 3 -->
+            <div class="menu-hamburguer" id="hamburguer" onclick="toggleMenu()" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </header>
 
-        <!-- Conteúdo principal do site -->
+        <!-- Conteúdo principal -->
         <main class="main">
 
-            <!-- Artigo 1 -->
-            <article id="ultima">
-                <h2>Como começou:</h2>
-
-                <!-- Imagem responsiva -->
+            <!-- Artigo 1 - Requisito 4: imagens responsivas com <picture> -->
+            <article id="inicio">
+                <h2>Como começou</h2>
                 <picture>
-                    <source media="(max-width: 600px)" srcset="img/inicio.png">
-                    <source media="(max-width: 1024px)" srcset="img/inicio.png">
-                    <img src="img/inicio.png" alt="Fundação do São Paulo FC">
+                    <source media="(max-width: 480px)" srcset="img/inicio-small.png">
+                    <source media="(max-width: 768px)" srcset="img/inicio-medium.png">
+                    <img src="img/inicio.png" alt="Fundação do São Paulo FC" loading="lazy">
                 </picture>
-
-                <!-- Texto do artigo -->
                 <p>
-                    Texto sobre a fundação do clube...
+                    O São Paulo Futebol Clube foi fundado em 25 de janeiro de 1930, na cidade de São Paulo. 
+                    Nasceu da fusão de dois grandes clubes paulistanos: o AA das Palmeiras e o CA Paulistano. 
+                    Desde o início, o clube demonstrou ambição e organização, tornando-se rapidamente um dos 
+                    maiores do Brasil. Sua primeira sede ficava no bairro do Pacaembu, e o clube cresceu 
+                    junto com a cidade que leva seu nome.
                 </p>
+                <button class="botao"><a href="#rodape">Saiba mais</a></button>
             </article>
 
             <!-- Artigo 2 -->
-            <article>
-                <h2>Conquistas:</h2>
-
+            <article id="conquistas">
+                <h2>Conquistas</h2>
                 <picture>
-                    <source media="(max-width: 600px)" srcset="img/Trofeus.jpg">
-                    <source media="(max-width: 1024px)" srcset="img/Trofeus.jpg">
-                    <img src="img/Trofeus.jpg" alt="Títulos do São Paulo FC">
+                    <source media="(max-width: 480px)" srcset="img/Trofeus-small.jpg">
+                    <source media="(max-width: 768px)" srcset="img/Trofeus-medium.jpg">
+                    <img src="img/Trofeus.jpg" alt="Títulos do São Paulo FC" loading="lazy">
                 </picture>
-
                 <p>
-                    Texto sobre conquistas do clube...
+                    O São Paulo FC é um dos clubes mais vitoriosos do Brasil e do mundo. No cenário 
+                    nacional, conquistou seis títulos do Campeonato Brasileiro e três da Copa do Brasil. 
+                    No plano continental, é tricampeão da Copa Libertadores da América (1992, 1993 e 
+                    2005). Internacionalmente, venceu três vezes a Copa Intercontinental, tornando-se 
+                    referência no futebol mundial.
                 </p>
+                <button class="botao"><a href="#rodape">Ver todos os títulos</a></button>
             </article>
 
             <!-- Artigo 3 -->
-            <article>
-                <h2>Escudo:</h2>
-
+            <article id="escudo">
+                <h2>Escudo</h2>
                 <picture>
-                    <source media="(max-width: 600px)" srcset="img/escudo.jpg">
-                    <source media="(max-width: 1024px)" srcset="img/escudo.jpg">
-                    <img src="img/escudo.jpg" alt="Escudo do São Paulo FC">
+                    <source media="(max-width: 480px)" srcset="img/escudo-small.jpg">
+                    <source media="(max-width: 768px)" srcset="img/escudo-medium.jpg">
+                    <img src="img/escudo.jpg" alt="Escudo do São Paulo FC" loading="lazy">
                 </picture>
-
                 <p>
-                    Texto sobre o escudo do clube...
+                    O escudo do São Paulo FC é um dos mais reconhecidos do futebol brasileiro. Composto 
+                    pelas cores preto, branco e vermelho, o símbolo representa a identidade e a tradição 
+                    do clube. As três listras verticais remetem à bandeira do estado de São Paulo, e o 
+                    design simples, porém marcante, reflete a seriedade e grandeza da instituição ao 
+                    longo de mais de 90 anos de história.
                 </p>
+                <button class="botao"><a href="#rodape">Saiba mais</a></button>
             </article>
 
             <!-- Artigo 4 -->
-            <article id="primeira">
-                <h2>Mascote:</h2>
-
+            <article id="mascote">
+                <h2>Mascote</h2>
                 <picture>
-                    <source media="(max-width: 600px)" srcset="img/mascote.jpg">
-                    <source media="(max-width: 1024px)" srcset="img/mascote.jpg">
-                    <img src="img/mascote.jpg" alt="Mascote do São Paulo FC">
+                    <source media="(max-width: 480px)" srcset="img/mascote-small.jpg">
+                    <source media="(max-width: 768px)" srcset="img/mascote-medium.jpg">
+                    <img src="img/mascote.jpg" alt="Mascote do São Paulo FC" loading="lazy">
                 </picture>
-
                 <p>
-                    Texto sobre o mascote...
+                    O mascote oficial do São Paulo FC é o Saci, personagem do folclore brasileiro que 
+                    representa alegria, malícia e irreverência. A escolha do Saci reflete a ligação do 
+                    clube com a cultura paulistana e brasileira. Nos jogos, o mascote anima a torcida e 
+                    se tornou símbolo de identificação com os jovens torcedores do Tricolor Paulista.
                 </p>
+                <button class="botao"><a href="#rodape">Saiba mais</a></button>
             </article>
 
         </main>
 
-        <!-- Área lateral (sidebar) -->
+        <!-- Sidebar - Requisito 2 -->
         <div class="aside-container">
 
-            <!-- Aside com links úteis -->
+            <!-- Aside 1: Links úteis -->
             <aside class="sidebar">
-                <h3>Links úteis:</h3>
+                <h3>🔗 Links Úteis</h3>
                 <ul>
-                    <li><a href="https://www.saopaulofc.net/">Site oficial do SPFC</a></li>
-                    <li><a href="#">Tabela do Brasileirão</a></li>
-                    <li><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_Futebol_Clube">História completa</a></li>
+                    <li><a href="https://www.saopaulofc.net/" target="_blank">🌐 Site oficial do SPFC</a></li>
+                    <li><a href="#" target="_blank">📋 Tabela do Brasileirão</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_Futebol_Clube" target="_blank">📖 História completa</a></li>
+                    <li><a href="#" target="_blank">🎟️ Comprar ingressos</a></li>
+                    <li><a href="#" target="_blank">🛒 Loja oficial</a></li>
                 </ul>
             </aside>
 
-            <!-- Aside com curiosidades -->
-            <aside class="sidebar">
-                <h3>Curiosidades do SPFC</h3>
-                <p>Informações interessantes sobre o clube.</p>
+            <!-- Aside 2: Curiosidades (Requisito 2) -->
+            <aside class="sidebar aside-curiosidades">
+                <h3>⚡ Curiosidades do SPFC</h3>
+                <ul class="lista-curiosidades">
+                    <li>🏟️ O Morumbi tem capacidade para <strong>67.052</strong> torcedores.</li>
+                    <li>🌍 Único clube a vencer a Copa Intercontinental <strong>3 vezes</strong>.</li>
+                    <li>⭐ Revelou craque <strong>Ronaldinho</strong> para o futebol mundial.</li>
+                    <li>🎽 Cores: <strong>vermelho, preto e branco</strong> desde 1916.</li>
+                    <li>🏆 Mais de <strong>136 títulos</strong> no total.</li>
+                </ul>
+            </aside>
+
+            <!-- Aside 3: Próximos jogos (conteúdo extra) -->
+            <aside class="sidebar aside-jogos">
+                <h3>📅 Próximos Jogos</h3>
+                <div class="jogo-card">
+                    <span class="jogo-data">20/04</span>
+                    <span class="jogo-info">SPFC × Corinthians</span>
+                    <span class="jogo-local">Morumbi</span>
+                </div>
+                <div class="jogo-card">
+                    <span class="jogo-data">27/04</span>
+                    <span class="jogo-info">Palmeiras × SPFC</span>
+                    <span class="jogo-local">Allianz Parque</span>
+                </div>
+                <div class="jogo-card">
+                    <span class="jogo-data">04/05</span>
+                    <span class="jogo-info">SPFC × Santos</span>
+                    <span class="jogo-local">Morumbi</span>
+                </div>
             </aside>
 
         </div>
 
-        <!-- Rodapé do site -->
+        <!-- Rodapé melhorado - Requisito 6 -->
         <footer class="footer" id="rodape">
+            <div class="footer-grid">
 
-            <!-- Informações de copyright -->
-            <p>Copyright 2026 &copy; - Blog São Paulo FC</p>
+                <div class="footer-col">
+                    <h4>Blog São Paulo FC</h4>
+                    <p>Um espaço dedicado à história, conquistas e paixão pelo Tricolor Paulista.</p>
+                    <p class="copyright">Copyright 2026 &copy; Todos os direitos reservados.</p>
+                </div>
 
-            <!-- Contato -->
-            <p>Email: <a href="mailto:kaleo.abr.exemplo@gmail.com">kaleo.abr.exemplo@gmail.com</a></p>
+                <div class="footer-col">
+                    <h4>📱 Redes Sociais</h4>
+                    <ul class="footer-lista">
+                        <li><a href="#">📸 Instagram: @k4leoa_breu</a></li>
+                        <li><a href="#">🎵 TikTok: @k4leoa_breu</a></li>
+                        <li><a href="#">🐦 Twitter/X: @k4leoa_breu</a></li>
+                        <li><a href="#">▶️ YouTube: k4leoa_breu</a></li>
+                    </ul>
+                </div>
 
-            <!-- Redes sociais -->
-            <p>Instagram: k4leoa_breu</p>
+                <div class="footer-col">
+                    <h4>📬 Contato</h4>
+                    <ul class="footer-lista">
+                        <li>✉️ Email: <a href="mailto:kaleo.abr.exemplo@gmail.com">kaleo.abr.exemplo@gmail.com</a></li>
+                        <li>📍 Cidade: Timon - MA</li>
+                        <li>🎓 IFPI - Curso TDS</li>
+                    </ul>
+                </div>
 
-            <!-- Localização -->
-            <p>Cidade: Timon - MA</p>
+            </div>
 
-            <!-- Botão para voltar ao topo -->
-            <button class="botao">
-                <a href="#topo">Voltar ao topo</a>
-            </button>
-
+            <div class="footer-bottom">
+                <p>Desenvolvido por Kaleo Abreu — IFPI 2026</p>
+                <button class="botao-topo">
+                    <a href="#topo">⬆ Voltar ao topo</a>
+                </button>
+            </div>
         </footer>
 
     </div>
 
-    <!-- Script para abrir/fechar menu -->
     <script>
+        // Requisito 3: Menu hambúrguer
         function toggleMenu() {
-            document.querySelector('#menu').classList.toggle('active');
+            const menu = document.querySelector('#menu');
+            const hamburguer = document.querySelector('#hamburguer');
+            menu.classList.toggle('active');
+            hamburguer.classList.toggle('ativo');
         }
+
+        // Fecha menu ao clicar em um link
+        document.querySelectorAll('#menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('#menu').classList.remove('active');
+                document.querySelector('#hamburguer').classList.remove('ativo');
+            });
+        });
+
+        // Requisito 7c: destaque visual no item atual do menu (scroll spy)
+        const sections = document.querySelectorAll('article[id], header[id]');
+        const navLinks = document.querySelectorAll('#menu a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('ativo');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('ativo');
+                }
+            });
+        });
     </script>
 
 </body>
-
 </html>
